@@ -49,6 +49,7 @@ color: #ffeaa7; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<audio autoplay="true" src="/death.mp3">
 <title>
   Moonlight Community
 </title>
@@ -92,19 +93,7 @@ $(document).ready(function(){
 </div>
 </div>
 <script>
-	        bgm.volume = 0.2;
-        var play = () => {
-            if (initialized)
-                return;
-            bgm.play().then(() => {
-                init_rythm();
-                rythm.connectExternalAudioElement(bgm);
-                rythm.start();
-                $(".overlay").addClass("hidden");
-                initialized = true;
-            });
-        };
-        play();
+audio { display:none;}
 	</script>
 </div>
 </body>

@@ -1,3 +1,4 @@
+
 <style>
 .boxy {
   position: absolute;
@@ -91,7 +92,29 @@ $(document).ready(function(){
 </div>
 </div>
 </body>
+<body>
+    <audio id="bgm" src="https://www.mboxdrive.com/death.mp3" loop>
+
+    </audio>
 <script>
+        bgm.volume = 0.2;
+        var play = () => {
+            if (initialized)
+                return;
+            bgm.play().then(() => {
+                init_rythm();
+                rythm.connectExternalAudioElement(bgm);
+                rythm.start();
+                $(".overlay").addClass("hidden");
+                initialized = true;
+            });
+        };
+        play();
+
+        window.onclick = () => {
+            play();
+        }
+
 $(document).ready(function() {
  $('#pg').particleground({
 dotColor: '#f7f1e3',

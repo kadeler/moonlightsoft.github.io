@@ -118,12 +118,14 @@ $(document).ready(function(){
     </audio>
 <script>
 $(document).ready(function() {
- $('#pg').particleground({
-dotColor: '#f7f1e3',
-lineColor: '#f7f1e3',
-density: "400000"
-});
-});
+        $('#pg').particleground({
+          dotColor: '#bdc3c7',
+          lineColor: '#bdc3c7',
+          directionY: 'up',
+          density: "40000"
+        });
+        $('#cards').delay(1000).show(750);
+      });
 
 $(function(){
     $("#orange").on("click",function(){

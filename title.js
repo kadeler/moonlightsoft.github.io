@@ -16,7 +16,7 @@ function loaded() {
 
 var x = 0;
 
-var titleText = ["m", "mo", "moo", "moon", "moonl", "moonli", "moonlig", "moonligh", "moonlight", "moonligh", "moonlig", "moonli", "moonl", "moon", "moo",  "mo", "m"];
+var titleText = ["m", "mo", "moo", "moon", "moonl", "moonli", "moonlig", "moonligh", "moonlight", "moonligh", "moonlig", "moonli", "moonl", "moon", "moo",  "mo", "m" ""];
 
 function loop() {
 

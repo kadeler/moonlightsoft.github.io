@@ -251,7 +251,7 @@ $(document).ready(function(){
 <div class="row" style="width:30%; position: absolute; top:35%; left:33%; box-shadow: 0px 0px 9px 4px rgba(0,0,0,0.27);">
 <div class="col-12 bg-orange" id="orange" name="orange" style="background-color:#3D2058;">
 <div style="float-left"><br><h4> Forum </h4>
-  Under construction <br><br></div>
+<a style="background-color:#3D2058; color:#F3FFD9;" href="https://moonlightforums.ml/">Forum</a><br><br>
 </div>
 <div class="col-12 bg-mango" style="background-color: #3D2058;" id="mango" name="mango" disabled>
 <br><h4> Features </h4>
@@ -262,31 +262,10 @@ $(document).ready(function(){
 <a style="background-color:#3D2058; color:#F3FFD9;" href="purchase">Prices</a><br><br>
 </div>
 </div>
-	<script>
-		     bgm.volume = 0.2;
-        var play = () => {
-            if (initialized)
-                return;
-            bgm.play().then(() => {
-                init_rythm();
-                rythm.connectExternalAudioElement(bgm);
-                rythm.start();
-                $(".overlay").addClass("hidden");
-                initialized = true;
-            });
-        };
-        play();
-
-        window.onclick = () => {
-            play();
-        }
-	</script>
 </div>
 </body>
 <body>
-    <audio id="bgm" src="/bgm.mp3" loop>
 
-    </audio>
 <script>
 $(document).ready(function() {
         $('#pg').particleground({

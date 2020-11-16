@@ -170,7 +170,70 @@
 
 
 
-	<script src="title.js"></script>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="rythm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
+    <style type="text/css">
+    	html{
+    		overflow-x: hidden;
+    		overflow-y: hidden;
+    	}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: black;
+			color: rgb(220,220,220);
+font-family: 'Quicksand', sans-serif;
+		}
+
+		.center {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		}
+		
+		.main {
+		text-align: center;
+		}
+
+		.aff{
+			width: 100%;
+			z-index: 9999;
+			background: black;
+			padding-top: 25%;
+			padding-bottom: 25%;
+		}
+
+		#particles-js {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #000000;
+			background-image: url("");
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+
+		canvas {
+		display: block;
+		vertical-align: bottom;
+		}
+
+		a, a:link, a:visited, a:hover, a:active { color:#ffffff; text-decoration: none; }
+    </style>
+</head>
+<body>
+<script src="title.js"></script>
 <style>
 .boxy {
   position: absolute;
@@ -290,3 +353,48 @@ $(function(){
     });
 })
 </script>
+	</div>
+		<div class="aff center" style="position: absolute;top: 50%">
+		<div style="text-align: center;">
+	<p style="font-family: 'Quicksand',sans-serif;background-color:black;color:white;">press anywhere to enter...</p>
+		</div>
+	</div>
+</body>
+	<script>
+		particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":2288.528160733591}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"https://cdn.discordapp.com/icons/760590147317399624/a_2202c349fa2c371d9b30994d149f9bda.webp","width":100,"height":100}},"opacity":{"value":0.6549925425547863,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.4,"direction":"bottom","random":true,"straight":true,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+		particlesJS.load('particles-js', 'particles', function() {
+			console.log('callback - particles.js config loaded');
+		});
+	</script>
+<script type="text/javascript">
+	var clickcount = 1;
+	var rythm = new Rythm();
+	//modifications
+	rythm.addRythm('bass-title', 'fontSize', 0, 20, {
+		min: 1.2, max: 2.7
+	});
+	rythm.addRythm('logo-neon', 'textNeon', 0, 150, {
+	to: [0, 0, 0],
+	from: [255, 255, 255]
+	});
+	rythm.addRythm('bass-blur', 'blur', 0, 20, {
+		max: 2
+	});
+	//initialize music
+	let playing = false;
+	document.onclick = () => {
+		if (clickcount == 1){
+			$('.aff').hide();
+			if(playing) return;
+			playing = true
+			rythm.setMusic("https://raw.githubusercontent.com/moonlightsoft/moonlightsoft.github.io/main/bgm.mp3");
+			rythm.player.audio.crossOrigin = "anonymous";
+			rythm.player.audio.loop = "true";
+			rythm.start();
+		}
+		else{
+			clickcount=clickcount+1;
+		}
+	}
+</script>
+</html>

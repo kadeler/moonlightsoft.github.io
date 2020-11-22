@@ -1,227 +1,592 @@
 
 
+    
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <meta name="description" content="Moonlight CS:GO Software">
+    <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b8/Moon_rotating_full_160px.gif" />
+    <meta name="theme-color" content="#bfd3ff">
+    <link rel="icon" href="z.gif" type="image/gif" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
     <script src="rythm.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
-    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Moonlight Software</title>
     <style type="text/css">
-    	html{
-    		overflow-x: hidden;
-    		overflow-y: hidden;
-    	}
+        html{
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
 
-		body {
-			margin: 0;
-			padding: 0;
-			background: black;
-			color: rgb(220,220,220);
-font-family: 'Quicksand', sans-serif;
-		}
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            color: rgb(220,220,220);
+            font-family: 'Quicksand', sans-serif;
+        }
 
-		.center {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
-		}
-		
-		.main {
-		text-align: center;
-		}
+        .center {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        }
+        
+        .main {
+        text-align: center;
+        }
 
-		.aff{
-			width: 100%;
-			z-index: 9999;
-			background: black;
-			padding-top: 25%;
-			padding-bottom: 25%;
-		}
+        .aff{
+            width: 100%;
+            z-index: 9999;
+            background: black;
+            padding-top: 25%;
+            padding-bottom: 25%;
+        }
 
-		#particles-js {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: #000000;
-			background-image: url("");
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: 50% 50%;
-		}
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
 
-		canvas {
-		display: block;
-		vertical-align: bottom;
-		}
+        .featurestab, .modalimg, .purchasetab {
+            height: 80%;
+            width: 80%;
+            background: #202020;
+            border-radius: 40px;
+        }
 
-		a, a:link, a:visited, a:hover, a:active { color:#ffffff; text-decoration: none; }
+
+
+        .featurestabheader {
+            padding: 2% 40% 1% 40%;font-size: 150%;text-align: center;font-weight: bold;
+        }
+        .link
+{
+   color:white;
+   text-decoration: none; 
+   background-color: none;
+}
+
+
+        span:hover { cursor: pointer; }
+
+        a, a:link, a:visited, a:hover, a:active { color:#ffffff; text-decoration: none; }
     </style>
 </head>
 <body>
-<script src="title.js"></script>
-<style>
-.boxy {
-  position: absolute;
-  font-family: 'Julius Sans One', sans-serif;
-  font-size: 14px;
-  opacity: 0.4;
-  color: white;
-   right: 6px;
-   top:4px;
-}
-.bg-grape:hover {
-background-color:#1B1B1D; color:#8c7ae6; border: solid 1px #8c7ae6; width:95%; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
-}
-.bg-grape{
-color: #8c7ae6; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
-  }
-.bg-mango:hover {
-background-color:#1B1B1D; color:#ffeaa7; border: solid 1px #ffeaa7; width:95%; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
-}
-.bg-mango{
-color: #ffeaa7; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
-  }
+    <script src="title.js"></script>
 
-  .bg-orange:hover {
-  background-color:#1B1B1D; color:#ff793f; border: solid 1px #ff793f; width:95%; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
-  }
-  .bg-orange{
-  color: #ff793f; width:95%; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
-    }
+    <div class="aff center" style="position: absolute;top: 50%">
+        <div style="text-align: center;">
+             press anywhere on the screen to continue...
+        </div>
+    </div>
 
-    #pg {
-        width:100%;
-        height:100%;
-    	  position: fixed;
-    	  z-index: -1;
-    	  opacity: 0.25;
-    }
-</style>
-<title>
-	Moonlight Software
-</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-<script src="jquery.particleground.min.js"></script>
-<script src='https://www.google.com/recaptcha/api.js'></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<link href="../assets/css/font-awesome.min.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-<link rel="icon" href="z.gif" type="image/gif" sizes="16x16">
-<meta charset="utf-8">
-<meta name="description" content="Moonlight CS:GO Software">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/b/b8/Moon_rotating_full_160px.gif" />
-<meta name="theme-color" content="#bfd3ff">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta charset="utf-8">
-<meta name="robots" content="index, follow" />
-<meta name="mediapartners" content="index, follow" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
-<script>
-$(document).ready(function(){
-	$('html, body').css({
-    overflow: 'hidden',
-    height: '100%'
-	});
-    var apnd = '<div class="boxy" style="display:none;">Join the<a href="https://discord.com/invite/fQBy8AS"> discord</a></div>';
-    $('#body').append(apnd);
-        $('.boxy').slideDown(2000).fadeIn(4000);
+    <div class="bass-blur" id="particles-js"></div>
 
-    });
-</script>
-<div id="pg"></div>
-<body id="body" name="body" style="background-color: #1B1B1D;">
-<div class="container-fluid" style="font-family: 'Quicksand',sans-serif; monospace; width:150%; height:150%; color:#8F00FF;">
-<center><div style="position: absolute; top:26%; left:37%;"><h3> Moonlight Software </h3></div></center>
-<br><br>
-<div class="row" style="width:30%; position: absolute; top:35%; left:33%; box-shadow: 0px 0px 9px 4px rgba(0,0,0,0.27);">
-<div class="col-12 bg-orange" style="background-color: #3D2058;" id="mango" name="mango" disabled>
-<br><h4> Forum </h4>
-<a style="background-color:#3D2058; color:#F3FFD9;" href="https://moonlightforums.ml/">Forum</a><br><br>
-</div>
-<div class="col-12 bg-mango" style="background-color: #3D2058;" id="mango" name="mango" disabled>
-<br><h4> Features </h4>
- <a style="background-color:#3D2058; color:#F3FFD9;" href="features">Features</a><br><br>
-</div>
-<div class="col-12 bg-grape" style="background-color: #3D2058;" id="mango" name="mango" disabled>
-<br><h4> Prices </h4>
-<a style="background-color:#3D2058; color:#F3FFD9;" href="purchase">Prices</a><br><br>
-</div>
-</div>
-</div>
+    <div class="main center">
+        <div style="font-size: 45px; margin-bottom: 5%;">
+            <span class="bass-title logo-neon">moonlight</span>
+        </div>
+        <div style="width:100%">
+            <a class="logo-neon link" style="padding: 5%; position: relative;" href="https://moonlightforums.ml">Forum</a>
+            <span class="logo-neon featuresbtn" style="padding: 5%; position: relative;">Features</span>
+            <span class="logo-neon purchasebtn" style="padding: 5%; position: relative;">Prices</span>
+        </div>
+    </div>
+    
+    <div class="featurestab center">
+        <div class="featurestabheader">FEATURES</div>
+        <div style="padding: 0% 5% 0% 5%;height: 80%;">
+            <span class="leftbtn" onclick="go_left();" style="left: 0;top: 0;margin: 7% 0% 0% 0%;position: absolute;padding: 15% 2% 15% 2%;">←</span>
+            <div class="featurestablist" style="position: relative;top: 50%;transform: translateY(-50%);">
+                <div class="0">
+                <iframe width="690" height="388" src="https://www.youtube.com/embed/2tfZ0FL62q8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div style="position: absolute;right: 0;top: 0;width: 50%;">
+                        <br>
+                        <h1 style="text-align: center;"><ul style="list-style: none"><li>Rage</li></ul></h1>
+                        <br>
+                        <ul>
+                            <p>		Doubletap (fast recharge)</p>
+                            <p>		Anti Aim</p>
+                            <p>		Resolver</p>
+                            <p>		Slow-Walk</p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="1">
+                    <img class="modalimg1" src="https://html-generator.com/uploads/images/2020/11/19/81441HKWW1UH89Z.png" height="388.8" style="width: 50%">
+                    <div style="position: absolute;right: 0;top: 0;width: 50%;text-align: center;">
+                        <br>
+                        <h1 style="text-align: center;"><ul style="list-style: none"><li>Legit</li></ul></h1>
+                        <br>
+                        <ul>
+                            <li>Aimbot (full customization of smoothing and bone selection)</li>
+                            <li>Glow Esp</li>
+                            <li>Chams (full color and alpha customization)</li>
+                            <li>Health Esp</li>
+                            <li>Box ESP</li>
+                            <li>Legit anti aim</li>
+                            <li>Recoil Control System</li>
+                            <li>Trigger Bot</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="2">
+                    <iframe width="690" height="388" src="https://www.youtube.com/embed/pA-yYZlkHrM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    <!--<img src="https://html-generator.com/uploads/images/2020/11/19/83158_4FK704TFK.png" style="width: 50%">-->
+                    <div style="position: absolute;right: 0;top: 0;width: 50%;text-align: center;">
+                        <br>
+                        <h1 style="text-align: center;"><ul style="list-style: none"><li>Skinchanger</li></ul></h1>
+                        <br>
+                        <ul>
+                            <p>Previews</p>
+                            <p>Knife changer</p>
+                            <p>Weapon Changer</p>
+                        </ul>
+                    </div>
+                </div>
+                <div class="3">
+                    <img class="modalimg3" src="https://i.ytimg.com/vi/vVAaNnw09tw/maxresdefault.jpg" style="width: 50%">
+                    <div style="position: absolute;right: 0;top: 0;width: 50%;text-align: center;">
+                        <br>
+                        <h1 style="text-align: center;"><ul style="list-style: none"><li>Misc</li></ul></h1>
+                        <br>
+                        <ul>
+                            <li>Bhop</li>
+                            <li>Autostrafe (wasd, standard and legit)</li>
+                            <li>Third Person</li>
+                            <li>Jump Bug</li>
+                            <li>Edge Jump</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="rightbtn" onclick="go_right();" style="right: 0;top: 0;position: absolute;margin: 7% 0% 0% 0%;padding: 15% 2% 15% 2%;">→</span>
+        </div>
+    </div>
+
+    <div class="purchasetab center">
+        <div class="featurestabheader">PRICES</div>
+        <div style="padding: 0% 5% 0% 5%;height: 80%;">
+            <div class="container center">
+                <div class="row">
+                    <div class="col">
+                        <div class="card text-white bg-primary plan1 mb-3" style="max-width: 18rem;min-height: 21rem;">
+                            <div class="card-header">€3.99 - Most Popular</div>
+                            <div class="card-body">
+                                <h5 class="card-title">+1 Month Membership</h5>
+                                <p class="card-text">First time using our cheat or just want a month of fun? This is the best option for you!</p>
+                                <div class="Force-Card-Bottom"><br><br><br><br>
+                                </div>
+                                <button onclick="location.href='https://shoppy.gg/product/fmslbMj'" class="btn btn-outline-light type=" button"="">Buy now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-success plan2 mb-3" style="max-width: 18rem;min-height: 21rem;">
+                            <div class="card-header">€11.99 - Most Liked</div>
+                            <div class="card-body">
+                                    <h5 class="card-title">+3 Month Membership</h5>
+                                    <p class="card-text">Great for customers who are not looking for a lifetime sub but still want to take there time getting use to the software. </p>
+                                    <div class="Force-Card-Bottom"><br><br></div>
+                                    <button onclick="location.href='https://shoppy.gg/product/cQFDqJk'" class="btn btn-outline-light type=" button"="">Buy now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-danger plan3 mb-3" style="max-width: 18rem;min-height: 21rem;">
+                            <div class="card-header">€29.99 - Best value</div>
+                            <div class="card-body">
+                                <h5 class="card-title">+Lifetime Membership</h5>
+                                <p class="card-text">Awesome! This is a great choice for members who want to be with us for the long run.</p>
+                                <div class="Force-Card-Bottom"><br><br><br></div>
+                                <button onclick="location.href='https://shoppy.gg/product/8WtG8Ff'" class="btn btn-outline-light type=" button"="">Buy now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-white bg-transparent plan4 mb-3" style="max-width: 18rem;min-height: 21rem;">
+                            <div class="card-header">Already Paid?</div><div class="card-body">
+                                <h5 class="card-title">Get your HWID</h5>
+                                <p class="card-text">."</p><div class="Force-Card-Bottom"><br></div>
+                                <button onclick="location.href='hwid.exe'" class="btn btn-outline-light type=" button"="">Get Hwid</button>
+                            </div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://s7.mylivechat.com/livechat2/livechat2.aspx?hccid=84558934&amp;apimode=chatinline"></script>
+                    <script async="" src="https://www.mylivechat.com/chatinline.aspx?hccid=84558934"></script>
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+                    <script type="text/javascript">function add_chatinline(){var hccid=84558934;var nt=document.createElement("script");nt.async=true;nt.src="https://www.mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}add_chatinline();</script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span style="position: absolute;right: 0px;padding: 1%" class="stfu">toggle sound</span>
+
+    <a href="https://discord.gg/fQBy8AS" target="_blank">
+        <span style="position: absolute;left: 0px;padding: 1%">discord</span>
+    </a>
+
+    <div class="modalimg center" style="display: none;">
+        
+    </div>
+
 </body>
-<body>
-
-<script>
-$(document).ready(function() {
-        $('#pg').particleground({
-          dotColor: '#bdc3c7',
-          lineColor: '#bdc3c7',
-          directionY: 'up',
-          density: "40000"
+    <script>
+        particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":2288.528160733591}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"https://cdn.discordapp.com/icons/760590147317399624/a_2202c349fa2c371d9b30994d149f9bda.webp","width":100,"height":100}},"opacity":{"value":0.6549925425547863,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.4,"direction":"bottom","random":true,"straight":true,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+        particlesJS.load('particles-js', 'particles', function() {
+            console.log('callback - particles.js config loaded');
         });
-        $('#cards').delay(1000).show(750);
-      });
+    </script>
+<script language="JavaScript">
+    window.onload = function () {
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function (e) {
+        //document.onkeydown = function(e) {
+        // "I" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+            disabledEvent(e);
+        }
+        // "J" key
+        if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            disabledEvent(e);
+        }
+        // "S" key + macOS
+        if (e.keyCode == 83 && (navigator.platform.match("Mac") ?    e.metaKey : e.ctrlKey)) {
+            disabledEvent(e);
+        }
+        // "U" key
+        if (e.ctrlKey && e.keyCode == 85) {
+            disabledEvent(e);
+        }
+        // "F12" key
+        if (event.keyCode == 123) {
+            disabledEvent(e);
+        }
+        }, false);
+        function disabledEvent(e) {
+        if (e.stopPropagation) {
+            e.stopPropagation();
+        } else if (window.event) {
+            window.event.cancelBubble = true;
+        }
+        e.preventDefault();
+        return false;
+        }
+}
+//edit: removed ";" from last "}" because of javascript error
+</script>
+    <script type="text/javascript">
+        var currentslide = 0;
+        var muted = false;
+        var modalopen = false;
+        $('.leftbtn').click(function go_left(){
+            if (currentslide == 0) {
+                $('.'+(currentslide)).hide('500');
+                currentslide = 3;
+                $('.'+(currentslide)).show('500');
+            }
+            else {
+                $('.'+(currentslide)).hide('500');
+                $('.'+(currentslide-1)).show('500');
+                currentslide = currentslide-1;
+            }
+        });
+        $('.rightbtn').click(function go_right(){
+            if (currentslide == 3) {
+                $('.'+(currentslide)).hide('500');
+                currentslide = 0;
+                $('.'+(currentslide)).show('500');
+            }
+            else {
+                $('.'+(currentslide)).hide('500');
+                $('.'+(currentslide+1)).show('500');
+                currentslide = currentslide+1;
+            }
+        });
+        $('.stfu').click(function stopbgm(){
+            if (muted == false) {
+                rythm.player.stop();
+                muted = true;
+            }
+            else {
+                rythm.player.start();
+                muted = false;
+            }
+        });
+        $('.modalimg3').click(function openmodal(){
+            $('.modalimg').append('<img class="center" src="https://i.ytimg.com/vi/vVAaNnw09tw/maxresdefault.jpg" height="90%" width="90%">'); 
+            $('.modalimg').show('1000');
+            modalopen = true;
+            $('#particles-js').click(function(){
+                $('.modalimg').empty();
+                $('.modalimg').hide('1000');
+            });
+        });
 
-$(function(){
-    $("#orange").on("click",function(){
-        window.location = "";
-    });
-})
-$(function(){
-    $("#mango").on("click",function(){
-        window.location = "";
-    });
-})
-</script>
-	</div>
-		<div class="aff center" style="position: absolute;top: 50%">
-		<div style="text-align: center;">
-	<p style="font-family: 'Quicksand',sans-serif;background-color:black;color:white;">press anywhere to enter...</p>
-		</div>
-	</div>
-</body>
-	<script>
-		particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":2288.528160733591}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":3},"image":{"src":"https://cdn.discordapp.com/icons/760590147317399624/a_2202c349fa2c371d9b30994d149f9bda.webp","width":100,"height":100}},"opacity":{"value":0.6549925425547863,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":4,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.4,"direction":"bottom","random":true,"straight":true,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"window","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
-		particlesJS.load('particles-js', 'particles', function() {
-			console.log('callback - particles.js config loaded');
-		});
-	</script>
-<script type="text/javascript">
-	var clickcount = 1;
-	var rythm = new Rythm();
-	//modifications
-	rythm.addRythm('bass-title', 'fontSize', 0, 20, {
-		min: 1.2, max: 2.7
-	});
-	rythm.addRythm('logo-neon', 'textNeon', 0, 150, {
-	to: [0, 0, 0],
-	from: [255, 255, 255]
-	});
-	rythm.addRythm('bass-blur', 'blur', 0, 20, {
-		max: 2
-	});
-	//initialize music
-	let playing = false;
-	document.onclick = () => {
-		if (clickcount == 1){
-			$('.aff').hide();
-			if(playing) return;
-			playing = true
-			rythm.setMusic("https://raw.githubusercontent.com/moonlightsoft/moonlightsoft.github.io/main/bgm.mp3");
-			rythm.player.audio.crossOrigin = "anonymous";
-			rythm.player.audio.loop = "true";
-			rythm.start();
-		}
-		else{
-			clickcount=clickcount+1;
-		}
-	}
-</script>
+        $('.modalimg1').click(function openmodal(){
+            $('.modalimg').append('<img class="center" src="https://images-ext-1.discordapp.net/external/2ez7ZXcqpLIlyDdv6lq66QTU9BuvIJc-iUeq836nn40/https/media.discordapp.net/attachments/758402937817923624/779187129887752202/o1gtSA7j.png" height="90%" width="50%">'); 
+            $('.modalimg').show('1000');
+            modalopen = true;
+            $('#particles-js').click(function(){
+                $('.modalimg').empty();
+                $('.modalimg').hide('1000');
+            });
+        });
+
+        $('.modalimg0').click(function openmodal(){
+            $('.modalimg').append('<img class="center" src="https://media.discordapp.net/attachments/771875547914960896/778817796154851369/unknown.png" height="90%" width="90%">'); 
+            $('.modalimg').show('1000');
+            modalopen = true;
+            $('#particles-js').click(function(){
+                $('.modalimg').empty();
+                $('.modalimg').hide('1000');
+            });
+        });
+
+        $(document).ready(function(){
+            $('.featurestab').hide('1');
+            $('.purchasetab').hide('1');
+            $('.modalimg').hide('1');
+            $('.1').hide('1');
+            $('.2').hide('1');
+            $('.3').hide('1');
+            $('.featuresbtn').click(function(){
+                $('.featurestab').show('1000');
+            });
+            $('.purchasebtn').click(function(){
+                $('.purchasetab').show('1000');
+            });
+            $('#particles-js').click(function(){
+                if (modalopen == true) {
+                    $('.modalimg').empty();
+                    $('.modalimg').hide('1000');
+                    modalopen = false;
+                }
+                else {
+                    $('.featurestab').hide('1000');
+                    $('.purchasetab').hide('1000');
+                } 
+            });
+        });
+        var clickcount = 1;
+        var rythm = new Rythm();
+        //modifications
+        rythm.addRythm('bass-title', 'fontSize', 0, 10, {
+            min: 1.2, max: 2.7
+        });
+        rythm.addRythm('logo-neon', 'textNeon', 200, 150, {
+        to: [0, 0, 0],
+        from: [255, 255, 255]
+        });
+        rythm.addRythm('bass-blur', 'blur', 0, 10, {
+            max: 2
+        });
+        rythm.addRythm('pulse1', 'pulse', 0, 10)
+        //initialize music
+        let playing = false;
+        document.onclick = () => {
+            if (clickcount == 1){
+                $('.aff').hide();
+                if(playing) return;
+                playing = true
+                rythm.setMusic("https://raw.githubusercontent.com/moonlightsoft/moonlightsoft.github.io/main/alone.mp3");
+                rythm.player.audio.crossOrigin = "anonymous";
+                rythm.player.audio.loop = "true";
+                rythm.start();
+            }
+            else{
+                clickcount=clickcount+1;
+            }
+        }
+    </script>
 </html>
